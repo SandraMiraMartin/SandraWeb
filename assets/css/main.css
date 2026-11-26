@@ -1124,55 +1124,40 @@ input, select, textarea {
 			padding: 0 1em;
 		} }
 
+	
+	#bg {
+		position: fixed !important;
+		top: 0 !important;
+		left: 0 !important;
+		right: 0 !important;
+		bottom: 0 !important;
+
+		width: 100% !important;
+		height: 100% !important;
+
+		background-color: #10182b !important;
+		background-image: url("images/Fondo.png") !important;
+
+		background-repeat: no-repeat !important;
+		background-position: center center !important;
+		background-size: cover !important;
+
+		z-index: -1;
+		opacity: 1 !important;
+
+		animation: fondoMovimiento 40s ease-in-out infinite alternate !important;
+		will-change: background-position;
+	}
+
+	/* Movimiento suave sin desplazar el contenedor */
+	@keyframes fondoMovimiento {
+		0% {
+			background-position: 48% center;
+		}
+
+		100% {
+			background-position: 52% center;
+		}
+	}
 
 
-
-#bg {
-    position: center !important;
-    top: 0 !important;
-    left: 0 !important;
-
-    width: 100vw !important;
-    height: 100vh !important;
-
-    background-color: #10182b !important;
-    background-image: url("images/Fondo.png") !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-
-    animation: fondoMovimiento 35s ease-in-out infinite alternate !important;
-
-    opacity: 1 !important;
-    will-change: transform;
-}
-
-/* Zoom y desplazamiento suave */
-@keyframes fondoMovimiento {
-    0% {
-        transform: scale(1.02) translateX(-0.5%);
-    }
-
-    50% {
-        transform: scale(1.07) translateX(0);
-    }
-
-    100% {
-        transform: scale(1.12) translateX(0.5%);
-    }
-}
-
-/* Móviles */
-@media screen and (max-width: 736px) {
-    #bg {
-        background-position: center center !important;
-    }
-}
-
-/* Accesibilidad */
-@media (prefers-reduced-motion: reduce) {
-    #bg {
-        animation: none !important;
-        transform: none !important;
-    }
-}

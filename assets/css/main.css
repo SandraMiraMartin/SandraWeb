@@ -1048,7 +1048,7 @@ input, select, textarea {
 		height: 100%;
 
 		background-color: #10182b;
-		background-image: url("images/Fondo.png");
+		background-image: url("./images/Fondo.png");
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: cover;

@@ -1125,12 +1125,10 @@ input, select, textarea {
 		} }
 
 
-/* =========================================
-   NUEVO FONDO PANORÁMICO - SANDRA WEB
-   ========================================= */
+
 
 #bg {
-    position: fixed !important;
+    position: center !important;
     top: 0 !important;
     left: 0 !important;
 

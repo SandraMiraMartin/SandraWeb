@@ -1,0 +1,141 @@
+
+/* =====================================
+   ESTILOS EXCLUSIVOS DE BALONCESTO
+   ===================================== */
+
+/* Permitir desplazamiento vertical */
+html,
+body {
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body {
+    height: auto;
+}
+
+/* Contenedor general */
+#wrapper {
+    position: relative;
+    min-height: 100vh;
+    height: auto;
+    overflow: visible;
+}
+
+/* Fondo */
+#bg {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: #10182b url("./images/Fondo.png") center center / cover no-repeat;
+    z-index: 0;
+}
+
+/* Capa oscura */
+#overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Contenido */
+#main {
+    position: relative;
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    padding: 3em 0 2em;
+    z-index: 2;
+}
+
+#main:before {
+    display: none;
+}
+
+/* Cabecera */
+#header {
+    position: relative;
+    display: block;
+    width: 90%;
+    margin: 0 auto 2em;
+    top: 0;
+}
+
+/* Sección de experiencia */
+#experiencia {
+    position: relative;
+    display: block;
+    width: 85%;
+    max-width: 900px;
+    margin: 0 auto 3em;
+    padding: 2em;
+    background: rgba(16, 24, 43, 0.85);
+    border-radius: 15px;
+    text-align: left;
+}
+
+/* Fotografía */
+.foto-entrenamiento {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 2em;
+}
+
+.foto-entrenamiento img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Bloques de experiencia */
+.bloque-experiencia {
+    display: block;
+    margin-bottom: 2em;
+}
+
+.bloque-experiencia h2 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 0.5em;
+}
+
+.bloque-experiencia ul {
+    padding-left: 1.5em;
+}
+
+.bloque-experiencia li {
+    margin-bottom: 0.8em;
+    line-height: 1.6em;
+}
+
+/* Pie de página */
+#footer {
+    position: relative;
+    height: auto;
+    line-height: normal;
+    padding: 2em 1em;
+    z-index: 2;
+}
+
+/* Adaptación a móviles */
+@media screen and (max-width: 736px) {
+    #experiencia {
+        width: 95%;
+        padding: 1.2em;
+    }
+
+    .foto-entrenamiento {
+        height: 190px;
+    }
+
+    .bloque-experiencia h2 {
+        font-size: 1.2em;
+    }
+}
